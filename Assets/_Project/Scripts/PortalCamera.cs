@@ -1,25 +1,44 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 
 public class PortalCamera : MonoBehaviour
 {
-    [SerializeField] private Camera playerCamera = default;
     [SerializeField] private Camera thisCamera = default;
-    
     [SerializeField] private Transform thisPortal = default;
-    [SerializeField] private Transform otherPortal = default;
-    
     [SerializeField] private MeshRenderer screen = default;
+    
+    private Camera playerCamera = default;
+    private Transform otherPortal = default;
+    private MeshRenderer otherPortalScreen = default;
 
-    [SerializeField] private bool clippingEnabled = true;
+    [SerializeField] private Shader shader = default;
+    private Material material = default;
     
     void OnEnable()
     {
+        playerCamera = Camera.main;
+        otherPortal = Portal.Portals.Find(p => p != thisPortal.GetComponent<Portal>()).transform;
+        otherPortalScreen = otherPortal.GetComponentInChildren<MeshRenderer>();
+        material = new Material(shader);
+        
+        SetTargetTexture();
+        
         thisCamera.enabled = false;
         RenderPipelineManager.beginCameraRendering += CameraPositionAndRotation;
     }
+
+    private void SetTargetTexture()
+    {
+        if (thisCamera.targetTexture != null) thisCamera.targetTexture.Release();
+
+        thisCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        otherPortalScreen.material = material;
+        otherPortalScreen.material.mainTexture = thisCamera.targetTexture;
+    }
+
     void OnDisable()
     {
         RenderPipelineManager.beginCameraRendering -= CameraPositionAndRotation;
@@ -27,6 +46,8 @@ public class PortalCamera : MonoBehaviour
 
     private void CameraPositionAndRotation(ScriptableRenderContext context, Camera cam)
     {
+        if (otherPortal == null) return;
+        
         thisCamera.enabled = true;
         screen.enabled = false;
         
@@ -34,7 +55,7 @@ public class PortalCamera : MonoBehaviour
         transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
         transform.RotateAround(thisPortal.position, thisPortal.up, 180f);
 
-        if (clippingEnabled) SetNearPlane();
+        //SetNearPlane();
 
         UniversalRenderPipeline.RenderSingleCamera(context, thisCamera);
 

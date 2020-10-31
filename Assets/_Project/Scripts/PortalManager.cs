@@ -1,55 +1,66 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public enum Colour { Blue, Orange }
+public enum Colour { None, Blue, Orange }
 
 public class PortalManager : MonoBehaviour
 {
+    [SerializeField] private Camera mainCamera = default;
     [SerializeField] private GameObject portalPrefab = default;
-
     
-    [Header("These can be left empty")]
-    [SerializeField] private GameObject bluePortal = default;
-    [SerializeField] private GameObject orangePortal = default;
-
-    private void CreatePortal(Colour colour, Transform target)
+    private void CreatePortal(Colour colour)
     {
-        var portal = colour == Colour.Blue ? bluePortal : orangePortal;
-        if (portal != null) Destroy(portal);
+        //check for valid Raycast
+        var ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f));
+        if (!Physics.Raycast(ray, out var hit)) return;
+
+        //if (Portal.PortalInProximity(hit.point)) return;
         
-        portal = Instantiate(portalPrefab);
-        portal.transform.SetPositionAndRotation(target.position, target.rotation);
+        //if there is already a portal of the same colour delete it
+        if (Portal.Portals.Find(p => p.colour == colour))
+        {
+            Destroy(Portal.Portals.Find(p => p.colour == colour).gameObject);
+            foreach (var p in Portal.Portals) p.IsActive = false;
+        }
+        
+        //create a new portal and give it the correct colour
+        var portal = Instantiate(portalPrefab).GetComponentInChildren<Portal>();
+        portal.colour = colour;
+        
+        //set position and rotation
+        var surfaceRotation = Quaternion.LookRotation(hit.normal);
+        portal.transform.SetPositionAndRotation(hit.point, surfaceRotation);
+        
+        //if 2 portals set both to active
+        if (Portal.Portals.Count > 1)
+        {
+            foreach (var p in Portal.Portals) p.IsActive = true;
+        }
     }
 
-    private void OnCenterClick()
+    public void DestroyPortals()
     {
         //Clears all existing portals
-        Destroy(bluePortal);
-        Destroy(orangePortal);
+        while (Portal.Portals.Count > 0)
+        {
+            Destroy(Portal.Portals[0].gameObject);
+        }
     }
 
-    public void OnPortalAction()
+    private void Update()
     {
-        // check target location
-        //if (!isValidLocation()) return;
-
-        var contextPosition = new Vector3();
-        var contextRotation = new Quaternion();
-        var contextColour = Colour.Blue;
-        
-        var otherPortal = GetOverlappingPortal(contextPosition, contextColour);
-        if (!otherPortal) Destroy(otherPortal);
-        
-        //CreatePortal(contextColour, contextPosition);
+        if(Input.GetMouseButtonDown(0)) CreatePortal(Colour.Blue);
+        if(Input.GetMouseButtonDown(1)) CreatePortal(Colour.Orange);
+        if(Input.GetMouseButtonDown(2)) DestroyPortals();
     }
 
     private GameObject GetOverlappingPortal(Vector3 position, Colour colour)
     {
-        var otherPortal =  colour == Colour.Blue ? bluePortal : orangePortal;
-        var distance = otherPortal.transform.position - position;
-        
-        //if (distance < amount) return otherPortal;
+        /////////////////////////////
         return null;
     }
 }
