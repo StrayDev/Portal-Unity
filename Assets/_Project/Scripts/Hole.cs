@@ -74,8 +74,9 @@ public class Hole
                 }
             }
             var go = new GameObject();
+            go.layer = 8;
+            
             var col = go.AddComponent<BoxCollider>();
-
             col.center = center;
             col.size = size;
 

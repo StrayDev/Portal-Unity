@@ -49,32 +49,18 @@ public class CreatePortalCollisions : MonoBehaviour
         {
             if (bc.bounds.Intersects(portal.bounds))
             {
-                Debug.Log("FIRED ::");
-                createNewCollisions(bc);
+                Hole.CutHole(portal.bounds, bc.bounds, transform);
+                bc.size = Vector3.zero;
             }
         }
 
         hasRun = true;
     }
-
-    private void createNewCollisions(BoxCollider box)
-    {
-        /*var bb = box.bounds;
-        var bx = box.bounds.extents;
-        var pb = portal.bounds;
-        var px = portal.bounds.extents;
-        box.size = Vector3.zero;
-
-        //left
-        var center = new Vector3();
-        var width = Vector3.Distance(pb.center + new Vector3(-px.x, 0, 0), bb.center + new Vector3(bx, 0, 0));
-        var leftTopBack = pb.center + new Vector3(-bx.x, bx.y, -bx.z);*/
-    }
-
+    
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1,0,0,0.25f);
-        Gizmos.DrawCube(centerPosition, halfExtents*2);
+        //Gizmos.color = new Color(1,0,0,0.25f);
+        //Gizmos.DrawCube(centerPosition, halfExtents*2);
         
         //Gizmos.color = new Color(0,0,1,0.25f);
         //Gizmos.DrawCube(transform.position, new Vector3(1, 2, 1f));

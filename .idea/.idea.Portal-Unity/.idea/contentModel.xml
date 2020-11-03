@@ -13,6 +13,7 @@
           <e p="Scripts" t="Include">
             <e p="CreatePortalCollisions.cs" t="Include" />
             <e p="Hole.cs" t="Include" />
+            <e p="LocalTrigger.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
