@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Portalable
   - Origin
   - Horizontal
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Local Collision
   - 
   - 
   - 

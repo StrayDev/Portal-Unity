@@ -11,8 +11,7 @@
             <e p="ScreenCutoutShader.shader" t="Include" />
           </e>
           <e p="Scripts" t="Include">
-            <e p="CameraClippingPlane.cs" t="Include" />
-            <e p="MainCamera.cs" t="Include" />
+            <e p="CreatePortalCollisions.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
@@ -20,7 +19,7 @@
             <e p="PortalDebugTools.cs" t="Include" />
             <e p="PortalManager.cs" t="Include" />
             <e p="PortalTeleport.cs" t="Include" />
-            <e p="PortalTextureSetup.cs" t="Include" />
+            <e p="TestScript.cs" t="Include" />
           </e>
         </e>
       </e>

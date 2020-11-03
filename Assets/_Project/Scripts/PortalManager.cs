@@ -18,7 +18,8 @@ public class PortalManager : MonoBehaviour
         var ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f));
         if (!Physics.Raycast(ray, out var hit)) return;
 
-        //if (Portal.PortalInProximity(hit.point)) return;
+        //check position is valid and destroy overlapping portals
+
         
         //if there is already a portal of the same colour delete it
         if (Portal.Portals.Find(p => p.colour == colour))
@@ -41,7 +42,7 @@ public class PortalManager : MonoBehaviour
             foreach (var p in Portal.Portals) p.IsActive = true;
         }
     }
-
+    
     public void DestroyPortals()
     {
         //Clears all existing portals

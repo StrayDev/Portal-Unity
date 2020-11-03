@@ -20,32 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a02ff25c-6e12-4995-a5b2-8223cd436627" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/.idea.Portal-Unity.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Camera_Mat_A.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Camera_Mat_A.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Camera_Mat_B.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Camera_Mat_B.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Materials/New Render Texture.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Materials/New Render Texture.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/ScreenCutoutShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/ScreenCutoutShader.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalGun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalGun.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CameraClippingPlane.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CameraClippingPlane.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MainCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MainCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTextureSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTextureSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +41,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -66,9 +52,12 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalGun.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTextureSetup.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/TestScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +99,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604171147743</updated>
-      <workItem from="1604171159122" duration="15248000" />
+      <workItem from="1604171159122" duration="15438000" />
+      <workItem from="1604228248944" duration="2491000" />
+      <workItem from="1604309264967" duration="17171000" />
+      <workItem from="1604339312421" duration="23697000" />
     </task>
     <servers />
   </component>
@@ -129,8 +121,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup" timestamp="1604340420491">
+      <screen x="3840" y="547" width="1920" height="1040" />
+    </state>
+    <state x="937" y="354" width="672" height="676" key="search.everywhere.popup/0.0.2560.1400/3840.547.1920.1040@0.0.2560.1400" timestamp="1604336108602" />
+    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup/0.0.2560.1400/3840.547.1920.1040@3840.547.1920.1040" timestamp="1604340420491" />
   </component>
 </project>
