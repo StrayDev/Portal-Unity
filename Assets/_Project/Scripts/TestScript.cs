@@ -6,61 +6,84 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    [SerializeField] private MeshCollider box = default;
-    [SerializeField] private MeshCollider wall = default;
+    [SerializeField] private BoxCollider box = default;
+    [SerializeField] private BoxCollider wall = default;
     
-    private Vector3 center = new Vector3();
-    private Vector3 size = new Vector3();
-
     void Start() 
     {
         if (box.bounds.Intersects(wall.bounds))
         {
-           LeftMesh(box.bounds.center, box.bounds.extents, wall.bounds.center, wall.bounds.extents);
-           RightMesh(box.bounds.center, box.bounds.extents, wall.bounds.center, wall.bounds.extents);
-
-
+           CutHole(box.bounds, wall.bounds);
+           wall.enabled = false;
+           box.enabled = false;
         }
     }
-
-    private void LeftMesh(Vector3 bc, Vector3 bx, Vector3 wc, Vector3 wx)
-    {
-        if (bc.x - bx.x < wc.x - wx.x) return;
-        
-        center = wc;
-        size = wall.bounds.size;
-        center.x = (bc.x - bx.x + wc.x - wx.x) / 2;
-        size.x = Vector3.Distance(bc + new Vector3(-bx.x, 0, 0), wc + new Vector3(-wx.x, 0, 0));
-            
-        var go = new GameObject();
-        var col = go.AddComponent<BoxCollider>();
-
-        col.center = center;
-        col.size = size;
-
-        go.transform.parent = transform;
-    }
     
-    private void RightMesh(Vector3 bc, Vector3 bx, Vector3 wc, Vector3 wx)
+    public void CutHole(Bounds hole, Bounds geometry)
     {
-        if (bc.x + bx.x > wc.x + wx.x) return;
+        var gCenter = geometry.center;
+        var gExtents = geometry.extents;
         
-        center = wc;
-        size = wall.bounds.size;
-        center.x = (bc.x + bx.x + wc.x + wx.x) / 2;
-        size.x = Vector3.Distance(bc + new Vector3(bx.x, 0, 0), wc + new Vector3(wx.x, 0, 0));
+        var hCenter = hole.center;
+        var hExtents = hole.extents;
+
+        for (int i = 0; i < 6; i++)
+        {
+            var center = geometry.center;
+            var size = geometry.size;
             
-        var go = new GameObject();
-        var col = go.AddComponent<BoxCollider>();
+            switch (i)
+            {
+                case 0:
+                {
+                    if (hCenter.x - hExtents.x < gCenter.x - gExtents.x) continue;
+                    center.x = (hCenter.x - hExtents.x + gCenter.x - gExtents.x) / 2;
+                    size.x = Vector3.Distance(new Vector3(hCenter.x + -hExtents.x, 0, 0), new Vector3(gCenter.x + -gExtents.x, 0, 0));
+                    break;
+                }
+                case 1:
+                {
+                    if (hCenter.x + hExtents.x > gCenter.x + gExtents.x) continue;
+                    center.x = (hCenter.x + hExtents.x + gCenter.x + gExtents.x) / 2;
+                    size.x = Vector3.Distance(new Vector3(hCenter.x + hExtents.x, 0, 0), new Vector3(gCenter.x + gExtents.x, 0, 0));
+                    break;
+                }
+                case 2:
+                {
+                    if (hCenter.y + hExtents.y > gCenter.y + gExtents.y) continue;
+                    center.y = (hCenter.y + hExtents.y + gCenter.y + gExtents.y) / 2;
+                    size.y = Vector3.Distance(new Vector3(0, hCenter.y + hExtents.y, 0), new Vector3(0, gCenter.y + gExtents.y, 0));
+                    break;
+                }
+                case 3:
+                {
+                    if (hCenter.y - hExtents.y < gCenter.y - gExtents.y) continue;
+                    center.y = (hCenter.y - hExtents.y + gCenter.y - gExtents.y) / 2;
+                    size.y = Vector3.Distance(new Vector3(0, hCenter.y + -hExtents.y, 0), new Vector3(0, gCenter.y + -gExtents.y, 0));
+                    break;
+                }
+                case 4:
+                {
+                    if (hCenter.z - hExtents.z < gCenter.z - gExtents.z) continue;
+                    center.z = (hCenter.z - hExtents.z + gCenter.z - gExtents.z) / 2;
+                    size.z = Vector3.Distance(new Vector3(0, 0, hCenter.z + -hExtents.z), new Vector3(0, 0, gCenter.z + -gExtents.z));
+                    break;
+                }
+                case 5:
+                {
+                    if (hCenter.z + hExtents.z > gCenter.z + gExtents.z) continue;
+                    center.z = (hCenter.z + hExtents.z + gCenter.z + gExtents.z) / 2;
+                    size.z = Vector3.Distance(new Vector3(0, 0, hCenter.z + hExtents.z), new Vector3(0, 0, gCenter.z + gExtents.z));
+                    break;
+                }
+            }
+            var go = new GameObject();
+            var col = go.AddComponent<BoxCollider>();
 
-        col.center = center;
-        col.size = size;
+            col.center = center;
+            col.size = size;
 
-        go.transform.parent = transform;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawCube(center, size);
+            go.transform.parent = transform;
+        }
     }
 }
