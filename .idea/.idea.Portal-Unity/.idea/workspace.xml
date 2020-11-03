@@ -21,16 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a02ff25c-6e12-4995-a5b2-8223cd436627" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unityvvv/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unityvvv/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CameraClippingPlane.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CameraClippingPlane.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MainCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MainCamera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +35,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,6 +53,9 @@
         <option value="$PROJECT_DIR$/Assets/_Project/TestScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PunchHole.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" />
       </list>
     </option>
   </component>
@@ -103,6 +101,7 @@
       <workItem from="1604228248944" duration="2491000" />
       <workItem from="1604309264967" duration="17171000" />
       <workItem from="1604339312421" duration="23697000" />
+      <workItem from="1604421126228" duration="377000" />
     </task>
     <servers />
   </component>

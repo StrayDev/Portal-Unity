@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\steve\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\steve\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Portal-Unity.-2144698215.00" t="ExcludeRecursive" />
-    <e p="C:\Users\steve\Desktop\Portal Assignment\Portal-Unity" t="IncludeRecursive">
+    <e p="C:\Users\steve\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Portal-Unity.-1184955788.00" t="ExcludeRecursive" />
+    <e p="C:\Users\steve\Desktop\Portal-Unity" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Project" t="Include">
@@ -12,6 +12,7 @@
           </e>
           <e p="Scripts" t="Include">
             <e p="CreatePortalCollisions.cs" t="Include" />
+            <e p="Hole.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
@@ -19,7 +20,7 @@
             <e p="PortalDebugTools.cs" t="Include" />
             <e p="PortalManager.cs" t="Include" />
             <e p="PortalTeleport.cs" t="Include" />
-            <e p="TestScript.cs" t="Include" />
+            <e p="Test.cs" t="Include" />
           </e>
         </e>
       </e>

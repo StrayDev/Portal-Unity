@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class TestScript : MonoBehaviour
+public class Hole
 {
-    [SerializeField] private BoxCollider box = default;
-    [SerializeField] private BoxCollider wall = default;
+    //[SerializeField] private BoxCollider box = default;
+    //[SerializeField] private BoxCollider wall = default;
     
-    void Start() 
+    /*void Start() 
     {
         if (box.bounds.Intersects(wall.bounds))
         {
@@ -17,9 +13,9 @@ public class TestScript : MonoBehaviour
            wall.enabled = false;
            box.enabled = false;
         }
-    }
+    }*/
     
-    public void CutHole(Bounds hole, Bounds geometry)
+    public static void CutHole(Bounds hole, Bounds geometry, Transform parent)
     {
         var gCenter = geometry.center;
         var gExtents = geometry.extents;
@@ -83,7 +79,7 @@ public class TestScript : MonoBehaviour
             col.center = center;
             col.size = size;
 
-            go.transform.parent = transform;
+            go.transform.parent = parent;
         }
     }
 }
