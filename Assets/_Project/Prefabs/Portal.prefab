@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 1372515441597298177}
   - component: {fileID: 1372515441597298178}
   - component: {fileID: 1372515441597298179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Screen
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6440078559063637620}
   - component: {fileID: 6256237788515470960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LocalCollisions
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5709220922303009097}
   - component: {fileID: 6732990339580154833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}

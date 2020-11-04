@@ -16,10 +16,9 @@ public class PortalManager : MonoBehaviour
     {
         //check for valid Raycast
         var ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f));
-        if (!Physics.Raycast(ray, out var hit)) return;
+        if (!Physics.Raycast(ray, out var hit, 999f, ~10)) return;
 
         //check position is valid and destroy overlapping portals
-
         
         //if there is already a portal of the same colour delete it
         if (Portal.Portals.Find(p => p.colour == colour))
@@ -58,7 +57,7 @@ public class PortalManager : MonoBehaviour
         if(Input.GetMouseButtonDown(1)) CreatePortal(Colour.Orange);
         if(Input.GetMouseButtonDown(2)) DestroyPortals();
     }
-
+    
     private GameObject GetOverlappingPortal(Vector3 position, Colour colour)
     {
         /////////////////////////////

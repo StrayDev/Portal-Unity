@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a02ff25c-6e12-4995-a5b2-8223cd436627" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -43,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PortalTeleport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -51,16 +53,17 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalGun.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTextureSetup.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/TestScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/TestScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PunchHole.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CreatePortalCollisions.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Hole.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" />
       </list>
     </option>
   </component>
@@ -107,6 +110,8 @@
       <workItem from="1604309264967" duration="17171000" />
       <workItem from="1604339312421" duration="23697000" />
       <workItem from="1604421126228" duration="4761000" />
+      <workItem from="1604479767712" duration="3228000" />
+      <workItem from="1604508821602" duration="9594000" />
     </task>
     <servers />
   </component>
@@ -131,10 +136,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup" timestamp="1604340420491">
+    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup" timestamp="1604512748537">
       <screen x="3840" y="547" width="1920" height="1040" />
     </state>
     <state x="937" y="354" width="672" height="676" key="search.everywhere.popup/0.0.2560.1400/3840.547.1920.1040@0.0.2560.1400" timestamp="1604336108602" />
-    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup/0.0.2560.1400/3840.547.1920.1040@3840.547.1920.1040" timestamp="1604340420491" />
+    <state x="4543" y="810" width="672" height="503" key="search.everywhere.popup/0.0.2560.1400/3840.547.1920.1040@3840.547.1920.1040" timestamp="1604512748537" />
   </component>
 </project>

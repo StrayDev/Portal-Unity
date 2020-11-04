@@ -13,7 +13,7 @@ public class LocalTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        other.gameObject.layer = 0;
+        other.gameObject.layer = 9;
         Debug.Log("EXIT");
     }
 }
