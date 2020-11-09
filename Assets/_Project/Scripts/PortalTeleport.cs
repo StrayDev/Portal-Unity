@@ -25,6 +25,12 @@ public class PortalTeleport : MonoBehaviour
 
       var positionOffset = Quaternion.Euler(0f, rotationDifference, 0f) * vectorToObject;
       player.position = receivingPortal.position + positionOffset;
+
+      var rb = player.gameObject.GetComponent<Rigidbody>();
+      var locVel = transform.InverseTransformDirection(rb.velocity);
+      //locVel.z = MovSpeed;
+      rb.velocity = transform.TransformDirection(locVel);
+      
       isOverlapping = false;
     }
   }

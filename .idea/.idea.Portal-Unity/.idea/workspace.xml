@@ -21,14 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a02ff25c-6e12-4995-a5b2-8223cd436627" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Portal-Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Portal.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Portal Gun Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTeleport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTeleport.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/LocalTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalObject.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PortalTeleport.cs" />
       </list>
     </option>
   </component>
@@ -112,6 +107,7 @@
       <workItem from="1604421126228" duration="4761000" />
       <workItem from="1604479767712" duration="3228000" />
       <workItem from="1604508821602" duration="9594000" />
+      <workItem from="1604916290761" duration="1240000" />
     </task>
     <servers />
   </component>
